@@ -1,0 +1,31 @@
+{
+  "name": "expense-tracker-reactapp",
+  "version": "1.0.0",
+  "description": "Backend for expense tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmoodayaz7/expense-tracker-reactapp.git"
+  },
+  "author": "Mehmood Ayaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mahmoodayaz7/expense-tracker-reactapp/issues"
+  },
+  "homepage": "https://github.com/mahmoodayaz7/expense-tracker-reactapp#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
