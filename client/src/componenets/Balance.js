@@ -1,18 +1,19 @@
-import React, {useContext} from 'react'
+import React, { useContext } from "react";
+import { numberWithCommas } from "../utils/format";
 
-//import Global Context 
-import {GlobalContext} from '../context/GlobalState';
+//import Global Context
+import { GlobalContext } from "../context/GlobalState";
 
 export const Balance = () => {
-    const { transactions } = useContext(GlobalContext);
+  const { transactions } = useContext(GlobalContext);
 
-    const amounts = transactions.map(trasactions => trasactions.amount);
-    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+  const amounts = transactions.map((trasactions) => trasactions.amount);
+  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
-    return (
-        <>
-            <h4>Your Balance</h4>
-            <h1>${total}</h1>
-        </>
-    )
-}
+  return (
+    <>
+      <h4>Your Balance</h4>
+      <h1>${numberWithCommas(total)}</h1>
+    </>
+  );
+};
